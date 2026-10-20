@@ -1,0 +1,58 @@
+[    6006ms] [LOG] THREE.WebGLRenderer 50dev @ http://localhost:8080/libs/Three.dev.js:341
+[    6018ms] [WARNING] WebGL: INVALID_OPERATION: getAttribLocation: program not linked @ http://localhost:8080/libs/Three.dev.js:725
+[    6018ms] [WARNING] WebGL: INVALID_OPERATION: getAttribLocation: program not linked @ http://localhost:8080/libs/Three.dev.js:725
+[    6018ms] [WARNING] WebGL: INVALID_OPERATION: getUniformLocation: program not linked @ http://localhost:8080/libs/Three.dev.js:725
+[    6018ms] [WARNING] WebGL: INVALID_OPERATION: getUniformLocation: program not linked @ http://localhost:8080/libs/Three.dev.js:725
+[    6018ms] [WARNING] WebGL: INVALID_OPERATION: getUniformLocation: program not linked @ http://localhost:8080/libs/Three.dev.js:725
+[    6018ms] [WARNING] WebGL: INVALID_OPERATION: getUniformLocation: program not linked @ http://localhost:8080/libs/Three.dev.js:725
+[    6018ms] [WARNING] WebGL: INVALID_OPERATION: getUniformLocation: program not linked @ http://localhost:8080/libs/Three.dev.js:725
+[    6018ms] [WARNING] WebGL: INVALID_OPERATION: getUniformLocation: program not linked @ http://localhost:8080/libs/Three.dev.js:726
+[    6018ms] [WARNING] WebGL: INVALID_OPERATION: getUniformLocation: program not linked @ http://localhost:8080/libs/Three.dev.js:726
+[    6018ms] [WARNING] WebGL: INVALID_OPERATION: getUniformLocation: program not linked @ http://localhost:8080/libs/Three.dev.js:726
+[    6021ms] [LOG] HIGH @ http://localhost:8080/bkcore/hexgl/tracks/Cityscape.js:119
+[    6027ms] [LOG] LOADED undefined : undefined ( 0 / 44 ). @ http://localhost:8080/launch.js:38
+[    6049ms] [LOG] LOADED geometries : bonus.base ( 1 / 44 ). @ http://localhost:8080/launch.js:38
+[    6119ms] [LOG] LOADED geometries : track.cityscape ( 2 / 44 ). @ http://localhost:8080/launch.js:38
+[    6146ms] [LOG] LOADED geometries : track.cityscape.scrapers1 ( 3 / 44 ). @ http://localhost:8080/launch.js:38
+[    6148ms] [LOG] LOADED geometries : track.cityscape.scrapers2 ( 4 / 44 ). @ http://localhost:8080/launch.js:38
+[    6149ms] [LOG] LOADED geometries : track.cityscape.start ( 5 / 44 ). @ http://localhost:8080/launch.js:38
+[    6150ms] [LOG] LOADED geometries : track.cityscape.start.banner ( 6 / 44 ). @ http://localhost:8080/launch.js:38
+[    6152ms] [LOG] LOADED geometries : track.cityscape.bonus.speed ( 7 / 44 ). @ http://localhost:8080/launch.js:38
+[    6162ms] [LOG] LOADED geometries : booster ( 8 / 44 ). @ http://localhost:8080/launch.js:38
+[    6168ms] [LOG] LOADED geometries : ship.feisar ( 9 / 44 ). @ http://localhost:8080/launch.js:38
+[    6170ms] [LOG] LOADED textures : hex ( 10 / 44 ). @ http://localhost:8080/launch.js:38
+[    6170ms] [LOG] LOADED textures : spark ( 11 / 44 ). @ http://localhost:8080/launch.js:38
+[    6170ms] [LOG] LOADED textures : cloud ( 12 / 44 ). @ http://localhost:8080/launch.js:38
+[    6171ms] [LOG] LOADED textures : ship.feisar.diffuse ( 13 / 44 ). @ http://localhost:8080/launch.js:38
+[    6171ms] [LOG] LOADED textures : ship.feisar.specular ( 14 / 44 ). @ http://localhost:8080/launch.js:38
+[    6171ms] [LOG] LOADED textures : ship.feisar.normal ( 15 / 44 ). @ http://localhost:8080/launch.js:38
+[    6171ms] [LOG] LOADED textures : booster.diffuse ( 16 / 44 ). @ http://localhost:8080/launch.js:38
+[    6171ms] [LOG] LOADED textures : booster.sprite ( 17 / 44 ). @ http://localhost:8080/launch.js:38
+[    6171ms] [LOG] LOADED textures : track.cityscape.diffuse ( 18 / 44 ). @ http://localhost:8080/launch.js:38
+[    6171ms] [LOG] LOADED textures : track.cityscape.specular ( 19 / 44 ). @ http://localhost:8080/launch.js:38
+[    6171ms] [LOG] LOADED textures : track.cityscape.normal ( 20 / 44 ). @ http://localhost:8080/launch.js:38
+[    6171ms] [LOG] LOADED textures : track.cityscape.scrapers1.diffuse ( 21 / 44 ). @ http://localhost:8080/launch.js:38
+[    6171ms] [LOG] LOADED textures : track.cityscape.scrapers1.normal ( 22 / 44 ). @ http://localhost:8080/launch.js:38
+[    6172ms] [LOG] LOADED textures : track.cityscape.scrapers1.specular ( 23 / 44 ). @ http://localhost:8080/launch.js:38
+[    6172ms] [LOG] LOADED textures : track.cityscape.scrapers2.diffuse ( 24 / 44 ). @ http://localhost:8080/launch.js:38
+[    6172ms] [LOG] LOADED textures : track.cityscape.scrapers2.specular ( 25 / 44 ). @ http://localhost:8080/launch.js:38
+[    6172ms] [LOG] LOADED textures : track.cityscape.scrapers2.normal ( 26 / 44 ). @ http://localhost:8080/launch.js:38
+[    6172ms] [LOG] LOADED textures : track.cityscape.start.diffuse ( 27 / 44 ). @ http://localhost:8080/launch.js:38
+[    6173ms] [LOG] LOADED textures : track.cityscape.start.specular ( 28 / 44 ). @ http://localhost:8080/launch.js:38
+[    6173ms] [LOG] LOADED textures : track.cityscape.start.normal ( 29 / 44 ). @ http://localhost:8080/launch.js:38
+[    6173ms] [LOG] LOADED textures : track.cityscape.start.banner ( 30 / 44 ). @ http://localhost:8080/launch.js:38
+[    6173ms] [LOG] LOADED textures : bonus.base.diffuse ( 31 / 44 ). @ http://localhost:8080/launch.js:38
+[    6173ms] [LOG] LOADED textures : bonus.base.normal ( 32 / 44 ). @ http://localhost:8080/launch.js:38
+[    6173ms] [LOG] LOADED textures : bonus.base.specular ( 33 / 44 ). @ http://localhost:8080/launch.js:38
+[    6173ms] [LOG] LOADED texturesCube : skybox.dawnclouds ( 34 / 44 ). @ http://localhost:8080/launch.js:38
+[    6255ms] [LOG] LOADED analysers : track.cityscape.collision ( 35 / 44 ). @ http://localhost:8080/launch.js:38
+[    6319ms] [LOG] LOADED analysers : track.cityscape.height ( 36 / 44 ). @ http://localhost:8080/launch.js:38
+[    6319ms] [LOG] LOADED images : hud.bg ( 37 / 44 ). @ http://localhost:8080/launch.js:38
+[    6319ms] [LOG] LOADED images : hud.speed ( 38 / 44 ). @ http://localhost:8080/launch.js:38
+[    6319ms] [LOG] LOADED images : hud.shield ( 39 / 44 ). @ http://localhost:8080/launch.js:38
+[    6328ms] [LOG] LOADED sounds : crash ( 40 / 44 ). @ http://localhost:8080/launch.js:38
+[    6329ms] [LOG] LOADED sounds : boost ( 41 / 44 ). @ http://localhost:8080/launch.js:38
+[    6331ms] [LOG] LOADED sounds : destroyed ( 42 / 44 ). @ http://localhost:8080/launch.js:38
+[    6336ms] [LOG] LOADED sounds : wind ( 43 / 44 ). @ http://localhost:8080/launch.js:38
+[    6659ms] [LOG] LOADED sounds : bg ( 44 / 44 ). @ http://localhost:8080/launch.js:38
+[    6660ms] [LOG] LOADED. @ http://localhost:8080/launch.js:28

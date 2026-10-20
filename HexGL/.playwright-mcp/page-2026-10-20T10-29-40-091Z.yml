@@ -1,0 +1,100 @@
+- generic [active] [ref=f1e1]:
+  - heading "HexGL — Tests de non-régression (QUnit)" [level=1] [ref=f1e2]
+  - main [ref=f1e3]:
+    - heading [level=1] [ref=f1e4]:
+      - link "HexGL — Tests QUnit" [ref=f1e5] [cursor=pointer]:
+        - /url: http://localhost:8080/formation/tests/index.html?hexgl_poc=ok
+    - heading [level=2] [ref=f1e6]
+    - navigation [ref=f1e7]:
+      - generic [ref=f1e8]:
+        - generic "Only show tests and assertions that fail. Stored as query-strings." [ref=f1e9]:
+          - checkbox "Hide passed tests" [ref=f1e10]
+          - text: Hide passed tests
+        - 'generic "Enabling this will test if any test introduces new properties on the global object (`window` in Browsers). Stored as query-strings." [ref=f1e11]':
+          - checkbox "Check for Globals" [ref=f1e12]
+          - text: Check for Globals
+        - generic "Enabling this will run tests outside of a try-catch block. Makes debugging exceptions in IE reasonable. Stored as query-strings." [ref=f1e13]:
+          - checkbox "No try-catch" [ref=f1e14]
+          - text: No try-catch
+      - generic [ref=f1e15]:
+        - generic [ref=f1e16]:
+          - generic [ref=f1e17]:
+            - text: "Filter:"
+            - textbox "Filter:" [ref=f1e18]
+          - button "Go" [ref=f1e19] [cursor=pointer]
+        - generic [ref=f1e20]:
+          - generic [ref=f1e21]: "Module:"
+          - generic [ref=f1e22]:
+            - textbox "Module:" [ref=f1e23]:
+              - /placeholder: All modules
+            - text: ▼
+    - heading "QUnit 2.26.0; Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36" [level=2] [ref=f1e24]
+    - paragraph [ref=f1e25]:
+      - generic [ref=f1e26]: 13 tests completed in 24 milliseconds, with 0 failed, 0 skipped, and 0 todo.25 assertions of 25 passed, 0 failed.
+    - list [ref=f1e28]:
+      - listitem [ref=f1e29]:
+        - strong [ref=f1e30] [cursor=pointer]: "HexGL — bkcore.Utils: updateClass ajoute une classe (2)"
+        - link "Rerun" [ref=f1e31] [cursor=pointer]:
+          - /url: http://localhost:8080/formation/tests/index.html?hexgl_poc=ok&testId=373ca6cb
+        - generic [ref=f1e32]: 3 ms
+      - listitem [ref=f1e33]:
+        - strong [ref=f1e34] [cursor=pointer]: "HexGL — bkcore.Utils: updateClass supprime une classe (2)"
+        - link "Rerun" [ref=f1e35] [cursor=pointer]:
+          - /url: http://localhost:8080/formation/tests/index.html?hexgl_poc=ok&testId=73f7813a
+        - generic [ref=f1e36]: 1 ms
+      - listitem [ref=f1e37]:
+        - strong [ref=f1e38] [cursor=pointer]: "HexGL — bkcore.Utils: getOffsetTop additionne les décalages parent/enfant (1)"
+        - link "Rerun" [ref=f1e39] [cursor=pointer]:
+          - /url: http://localhost:8080/formation/tests/index.html?hexgl_poc=ok&testId=528fb128
+        - generic [ref=f1e40]: 0 ms
+      - listitem [ref=f1e41]:
+        - strong [ref=f1e42] [cursor=pointer]: "HexGL — bkcore.Utils: getURLParameter lit les paramètres d'URL (2)"
+        - link "Rerun" [ref=f1e43] [cursor=pointer]:
+          - /url: http://localhost:8080/formation/tests/index.html?hexgl_poc=ok&testId=d021b0b7
+        - generic [ref=f1e44]: 1 ms
+      - listitem [ref=f1e45]:
+        - strong [ref=f1e46] [cursor=pointer]: "HexGL — bkcore.Utils (non-régression): updateClass ignore un id inconnu sans lever d'erreur (1)"
+        - link "Rerun" [ref=f1e47] [cursor=pointer]:
+          - /url: http://localhost:8080/formation/tests/index.html?hexgl_poc=ok&testId=77e0b743
+        - generic [ref=f1e48]: 0 ms
+      - listitem [ref=f1e49]:
+        - strong [ref=f1e50] [cursor=pointer]: "HexGL — bkcore.Utils (non-régression): getOffsetTop sans parent renvoie son propre décalage (1)"
+        - link "Rerun" [ref=f1e51] [cursor=pointer]:
+          - /url: http://localhost:8080/formation/tests/index.html?hexgl_poc=ok&testId=3fa9635c
+        - generic [ref=f1e52]: 0 ms
+      - listitem [ref=f1e53]:
+        - strong [ref=f1e54] [cursor=pointer]: "HexGL — bkcore.Utils (non-régression): getURLParameter : paramètres multiples et absent (3)"
+        - link "Rerun" [ref=f1e55] [cursor=pointer]:
+          - /url: http://localhost:8080/formation/tests/index.html?hexgl_poc=ok&testId=55380c21
+        - generic [ref=f1e56]: 2 ms
+      - listitem [ref=f1e57]:
+        - strong [ref=f1e58] [cursor=pointer]: "HexGL — bkcore.Utils (non-régression): isTouchDevice renvoie un booléen (1)"
+        - link "Rerun" [ref=f1e59] [cursor=pointer]:
+          - /url: http://localhost:8080/formation/tests/index.html?hexgl_poc=ok&testId=855e505d
+        - generic [ref=f1e60]: 1 ms
+      - listitem [ref=f1e61]:
+        - strong [ref=f1e62] [cursor=pointer]: "HexGL — bkcore.Timer: msToTime découpe h/m/s/ms (3)"
+        - link "Rerun" [ref=f1e63] [cursor=pointer]:
+          - /url: http://localhost:8080/formation/tests/index.html?hexgl_poc=ok&testId=c757ee93
+        - generic [ref=f1e64]: 1 ms
+      - listitem [ref=f1e65]:
+        - strong [ref=f1e66] [cursor=pointer]: "HexGL — bkcore.Timer: msToTimeString complète avec des zéros (ms sur 4 chiffres) (1)"
+        - link "Rerun" [ref=f1e67] [cursor=pointer]:
+          - /url: http://localhost:8080/formation/tests/index.html?hexgl_poc=ok&testId=ae2ee61f
+        - generic [ref=f1e68]: 0 ms
+      - listitem [ref=f1e69]:
+        - strong [ref=f1e70] [cursor=pointer]: "HexGL — bkcore.Timer: zfill remplit sans tronquer (2)"
+        - link "Rerun" [ref=f1e71] [cursor=pointer]:
+          - /url: http://localhost:8080/formation/tests/index.html?hexgl_poc=ok&testId=1f7914a8
+        - generic [ref=f1e72]: 1 ms
+      - listitem [ref=f1e73]:
+        - strong [ref=f1e74] [cursor=pointer]: "HexGL — bkcore.Timer: start/update mesure le temps écoulé, pause le fige (5)"
+        - link "Rerun" [ref=f1e75] [cursor=pointer]:
+          - /url: http://localhost:8080/formation/tests/index.html?hexgl_poc=ok&testId=c175efdf
+        - generic [ref=f1e76]: 1 ms
+      - listitem [ref=f1e77]:
+        - strong [ref=f1e78] [cursor=pointer]: "HexGL — bkcore.Timer: getElapsedTime formate time.elapsed (1)"
+        - link "Rerun" [ref=f1e79] [cursor=pointer]:
+          - /url: http://localhost:8080/formation/tests/index.html?hexgl_poc=ok&testId=b23a2549
+        - generic [ref=f1e80]: 0 ms
+  - paragraph [ref=f1e82]: "25 test(s) : 25 réussi(s), 0 échec(s)."
