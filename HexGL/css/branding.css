@@ -1,5 +1,13 @@
 /* Couche de branding de l'écran d'accueil : chargée après multi.css, valeurs dans branding.js (--brand-*). */
 
+html, body {
+  background: var(--brand-bg);
+}
+
+#step-3 #progressbar {
+  background: var(--brand-cyan);
+}
+
 #global {
   background: var(--brand-bg);
   animation: none;
