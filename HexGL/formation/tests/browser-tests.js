@@ -66,4 +66,109 @@
       assert.strictEqual(U.getURLParameter("hexgl_poc"), expected);
     });
   });
+
+  QUnit.module("HexGL — bkcore.Utils (non-régression)", function () {
+    QUnit.test("updateClass ignore un id inconnu sans lever d'erreur", function (assert) {
+      assert.strictEqual(U.updateClass("id-inexistant-hexgl", "active", true), undefined);
+    });
+    QUnit.test("getOffsetTop sans parent renvoie son propre décalage", function (assert) {
+      assert.strictEqual(U.getOffsetTop({ offsetTop: 21, offsetParent: null }), 21);
+    });
+    QUnit.test("getURLParameter : paramètres multiples et absent", function (assert) {
+      const initial = window.location.href;
+      try {
+        history.replaceState(null, "", "?hexgl_poc=ok&quality=2&hud=0");
+        U.URLParameters = null;
+        assert.strictEqual(String(U.getURLParameter("quality")), "2");
+        assert.strictEqual(String(U.getURLParameter("hud")), "0");
+        assert.strictEqual(U.getURLParameter("absent"), undefined);
+      } finally {
+        history.replaceState(null, "", initial);
+        U.URLParameters = null;
+      }
+    });
+    QUnit.test("isTouchDevice renvoie un booléen", function (assert) {
+      assert.strictEqual(typeof U.isTouchDevice(), "boolean");
+    });
+  });
+
+  const T = window.bkcore && window.bkcore.Timer;
+  QUnit.module("HexGL — bkcore.Timer", function () {
+    QUnit.test("msToTime découpe h/m/s/ms", function (assert) {
+      assert.ok(T, "Timer.js chargé");
+      assert.deepEqual(T.msToTime(3723456), { h: 1, m: 2, s: 3, ms: 456 });
+      assert.deepEqual(T.msToTime(0), { h: 0, m: 0, s: 0, ms: 0 });
+    });
+    QUnit.test("msToTimeString complète avec des zéros (ms sur 4 chiffres)", function (assert) {
+      // 92300 ms = temps de tour utilisé par Gameplay.simu
+      assert.deepEqual(T.msToTimeString(92300), { h: "00", m: "01", s: "32", ms: "0300" });
+    });
+    QUnit.test("zfill remplit sans tronquer", function (assert) {
+      assert.strictEqual(T.zfill(7, 3), "007");
+      assert.strictEqual(T.zfill(1234, 2), "1234");
+    });
+    QUnit.test("start/update mesure le temps écoulé, pause le fige", function (assert) {
+      const t = new T();
+      assert.false(t.active);
+      t.update();
+      assert.strictEqual(t.time.elapsed, 0, "inactif : update ne fait rien");
+      t.start();
+      assert.true(t.active);
+      t.time.start -= 1500; // simule 1,5 s écoulée sans attendre
+      t.update();
+      assert.ok(t.time.elapsed >= 1500, "elapsed >= 1500 ms");
+      t.pause(true);
+      const fige = t.time.elapsed;
+      t.time.start -= 1000;
+      t.update();
+      assert.strictEqual(t.time.elapsed, fige, "en pause : elapsed inchangé");
+    });
+    QUnit.test("getElapsedTime formate time.elapsed", function (assert) {
+      const t = new T();
+      t.time.elapsed = 61005;
+      assert.deepEqual(t.getElapsedTime(), { h: 0, m: 1, s: 1, ms: 5 });
+    });
+  });
+
+  QUnit.module("HexGL — branding.js", function () {
+    const cfg = {
+      pageTitle: "Titre test",
+      logo: { src: "x/logo.png", alt: "Alt test" },
+      welcome: "Bienvenue test",
+      subtitle: "Sous-texte test",
+      startLabel: "GO",
+      colors: { bg: "#010203", violet: "#7628FF" }
+    };
+    // Document isolé : ne touche ni au titre ni aux styles de la page de tests.
+    function fakeDoc() {
+      return document.implementation.createHTMLDocument("avant");
+    }
+    QUnit.test("applyBranding renseigne titre, logo, textes, bouton et variables CSS", function (assert) {
+      assert.strictEqual(typeof window.applyBranding, "function", "branding.js chargé");
+      const d = fakeDoc();
+      d.body.innerHTML = '<img id="brand-logo"><h1 id="brand-welcome"></h1><p id="brand-subtitle"></p><div id="start">Start</div>';
+      window.applyBranding(cfg, d);
+      assert.strictEqual(d.title, "Titre test");
+      assert.strictEqual(d.getElementById("brand-logo").getAttribute("src"), "x/logo.png");
+      assert.strictEqual(d.getElementById("brand-logo").alt, "Alt test");
+      assert.strictEqual(d.getElementById("brand-welcome").textContent, "Bienvenue test");
+      assert.strictEqual(d.getElementById("brand-subtitle").textContent, "Sous-texte test");
+      assert.strictEqual(d.getElementById("start").textContent, "GO");
+      assert.strictEqual(d.documentElement.style.getPropertyValue("--brand-bg"), "#010203");
+      assert.strictEqual(d.documentElement.style.getPropertyValue("--brand-violet"), "#7628FF");
+    });
+    QUnit.test("applyBranding ignore un DOM incomplet sans erreur", function (assert) {
+      const d = fakeDoc();
+      window.applyBranding(cfg, d);
+      assert.strictEqual(d.title, "Titre test");
+    });
+    QUnit.test("la config ACME fournie respecte la charte (message exact, palette)", function (assert) {
+      const b = window.BRANDING;
+      assert.strictEqual(b.welcome, "Bienvenue au ACME Racing Challenge");
+      assert.strictEqual(b.colors.bg, "#08090D");
+      assert.strictEqual(b.colors.violet, "#7628FF");
+      assert.strictEqual(b.colors.blue, "#315BFF");
+      assert.strictEqual(b.colors.cyan, "#00C4E8");
+    });
+  });
 })();
