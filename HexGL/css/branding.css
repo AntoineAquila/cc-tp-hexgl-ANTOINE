@@ -1,0 +1,82 @@
+/* Couche de branding de l'écran d'accueil : chargée après multi.css, valeurs dans branding.js (--brand-*). */
+
+#global {
+  background: var(--brand-bg);
+  animation: none;
+}
+
+#title {
+  display: none;
+}
+
+#brand {
+  position: absolute;
+  top: 4%;
+  right: 0;
+  left: 0;
+  z-index: 1;
+  padding: 0 16px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#brand-logo {
+  display: block;
+  box-sizing: border-box;
+  width: min(560px, 86vw, 60vh);
+  height: auto;
+  margin: 0 auto 4vh;
+  padding: 12px 20px;
+  border-radius: 24px;
+  background: var(--brand-text);
+}
+
+#brand-welcome {
+  margin: 0 0 0.4em;
+  font-size: clamp(1.6rem, 4.5vw, 2.8rem);
+  font-weight: 700;
+  color: var(--brand-text);
+}
+
+#brand-subtitle {
+  margin: 0;
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  color: var(--brand-surface);
+}
+
+#menu {
+  color: var(--brand-text);
+}
+
+#menu div {
+  background: none;
+  text-shadow: none;
+  transform: none;
+  -webkit-transform: none;
+}
+
+#menu div:hover {
+  color: var(--brand-cyan);
+  transform: none;
+  -webkit-transform: none;
+}
+
+#menu #start {
+  width: fit-content;
+  margin: 0 auto 0.3em;
+  padding: 0.25em 1.2em 0.1em;
+  border-radius: 999px;
+  font-size: 1.5em;
+  color: var(--brand-text);
+  background: var(--brand-violet);
+}
+
+#menu #start:hover {
+  color: var(--brand-text) !important;
+  background: var(--brand-blue);
+}
+
+@media (max-width: 600px) {
+  #menu { font-size: 1.5em; }
+  #menu #start { font-size: 1.3em; }
+}
